@@ -1,5 +1,9 @@
 {
   "textlint.languages": [
     "review"
-  ]
+  ],
+  "[review]": {
+    "editor.tabSize": 1,
+    "editor.insertSpaces": false
+  }
 }
