@@ -186,20 +186,20 @@
   enhanced,breakable,arc=1mm,
   frame hidden,colback=white,
   borderline={0.25mm}{0mm}{black,dotted},
-  fontupper={\gtfamily\sffamily},
-  % before upper={\parindent\reviewtcb@zw{1}},
+  % fontupper={\gtfamily\sffamily}, %250220変更
+  before upper={\parindent\reviewtcb@zw{1}}, %250220変更
   #1}
 
 \DeclareTColorBox{rv@dottedbox@caption}{ m O{} }{%
   enhanced,breakable,arc=1mm,
   frame hidden,colback=white,
   borderline={0.25mm}{0mm}{black,dotted},
-  fontupper={\gtfamily\sffamily},
-  % before upper={\parindent\reviewtcb@zw{1}},
+  % fontupper={\gtfamily\sffamily}, %250220変更
+  before upper={\parindent\reviewtcb@zw{1}}, %250220変更
   fonttitle={\reviewtcb@gtfamily\sffamily\bfseries},
   coltitle=black,
-  attach title to upper, after title={\quad},
-  title={#1},
+  % attach title to upper, after title={\quad}, %250220変更
+  title={\vspace{1.2ex}\raisebox{-1.2ex}[0pt][0pt]{#1}}, %250220変更
   #2}
 
 % bothsidelinebox

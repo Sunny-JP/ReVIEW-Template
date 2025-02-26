@@ -186,7 +186,7 @@
 %% hiddenfolio=nikko-pc
 \@namedef{@makehiddenfolio@nikko-pc}{%
   \def\recls@hiddfolio{%
-    \edef\recls@tmp{\thepage}%
+    \edef\recls@tmp{\number\c@page}% %250221変更 カスタム干渉回避
     \lower\dimexpr4pt+\@tombowbleed+.5\paperheight+5\p@\hbox{%
       \vbox{\expandafter\@tfor\expandafter\recls@x\expandafter:\expandafter=\recls@tmp\do{%
         \hbox to 1zw{\hss\recls@x\hss}}}}}%

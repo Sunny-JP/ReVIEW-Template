@@ -1,1 +1,34 @@
 % for user-defined macro
+
+\def\@makechapterhead#1{%
+  \vspace*{0\Cvs}
+  {\parindent \z@ \raggedright \normalfont
+    \ifnum \c@secnumdepth >\m@ne
+      \if@mainmatter
+        \huge\headfont \@chapapp\thechapter\@chappos
+        \par\nobreak
+        \vskip 0.5\Cvs
+        \hrule height 1pt width \textwidth % 下線を追加
+        \vskip 0.5\Cvs
+      \fi
+    \fi
+    \interlinepenalty\@M
+    \Huge \headfont #1\par\nobreak
+    \vskip 2\Cvs}}
+
+\def\@makeschapterhead#1{%
+  \vspace*{0\Cvs}
+  {\parindent \z@ \raggedright
+    \normalfont
+    \interlinepenalty\@M
+    \Huge \headfont #1\par\nobreak
+    \vskip 0.5\Cvs
+    \hrule height 1pt width \textwidth % 下線を追加
+    \vskip 2\Cvs}}
+
+
+%% シンプルな通しノンブル
+\ifrecls@serialpage
+\def\pagenumbering#1{%
+  \gdef\thepage{\large\csname @arabic\endcsname\c@page}}
+\fi
